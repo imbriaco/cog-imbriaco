@@ -2,7 +2,7 @@
 cog_bundle_version: 4
 name: imbriaco
 description: Miscellaneous Dung
-version: 0.0.13
+version: 0.0.15
 permissions:
 - imbriaco:exec
 commands:
@@ -14,12 +14,17 @@ commands:
     - when command is imbriaco:exec must have imbriaco:exec
 templates:
   body_plain:
-    body: "~$results[0].body~\n"
+    body: |
+      ~attachment title=$results[0].title~
+      ~$results[0].body~
+      ~end~
   body_raw:
     body: |
+      ~attachment title=$results[0].title~
       ```
       ~$results[0].body~
       ```
+      ~end~
   service:
     body: |
       ~attachment title="Service Request" URL=$results[0].url~

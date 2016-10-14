@@ -6,6 +6,7 @@ module CogCmd
     class Exec < Cog::Command
       def run_command
         action = request.args[0]
+        response["title"] = [ "imbriaco:exec", action ].join(" ")
 
         if action.nil?
           response.template = "body_plain"

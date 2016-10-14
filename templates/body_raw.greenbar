@@ -1,3 +1,5 @@
+~attachment title=$results[0].title~
 ```
 ~$results[0].body~
 ```
+~end~
