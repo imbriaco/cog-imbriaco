@@ -1,0 +1,12 @@
+~attachment title="Service Request" URL=$results[0].url~
+~end~
+~attachment title=Headers~
+```
+~$results[0].headers~
+```
+~end~
+~attachment title=Body~
+```
+~$results[0].body~
+```
+~end~

@@ -1,0 +1,36 @@
+---
+cog_bundle_version: 4
+name: imbriaco
+description: Miscellaneous Dung
+version: 0.0.13
+permissions:
+- imbriaco:exec
+commands:
+  exec:
+    description: Execute ... something. Generic utility command
+    executable: "/Users/imbriaco/operable/bundles/imbriaco/cog-command"
+    arguments: "<args>"
+    rules:
+    - when command is imbriaco:exec must have imbriaco:exec
+templates:
+  body_plain:
+    body: "~$results[0].body~\n"
+  body_raw:
+    body: |
+      ```
+      ~$results[0].body~
+      ```
+  service:
+    body: |
+      ~attachment title="Service Request" URL=$results[0].url~
+      ~end~
+      ~attachment title=Headers~
+      ```
+      ~$results[0].headers~
+      ```
+      ~end~
+      ~attachment title=Body~
+      ```
+      ~$results[0].body~
+      ```
+      ~end~

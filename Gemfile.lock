@@ -1,0 +1,19 @@
+PATH
+  remote: ../../cog-rb
+  specs:
+    cog-rb (0.3.2)
+      rake (~> 11.2)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    rake (11.3.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  cog-rb!
+
+BUNDLED WITH
+   1.12.5
